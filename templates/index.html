@@ -10,17 +10,27 @@
         function goToPage(page) {
             window.location.href = page;
         }
+
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
     </script>
 </head>
 <body>
     <header>
         <div class="logo" style="color: black;">📖 Forum_Log</div>
-        <nav>
+        <nav id="nav">
             <button onclick="goToPage('python.html')">Python</button>
             <button onclick="goToPage('html.html')">HTML</button>
             <button onclick="goToPage('css.html')">CSS</button>
             <button onclick="goToPage('javascript.html')">JavaScript</button>
         </nav>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
     </header>
     <main>
         <h1 style="color: black;">Forum_L створений для того, щоб ви могли покращити свої знання у програмуванні</h1>
